@@ -1,0 +1,14 @@
+<h1>{{message}}</h1>
+
+<form ng-submit="movieSearch(search.title)">
+	<input type="text" ng-model="search.title">
+	<input type="submit">
+</form>
+
+<div>
+	<ul>
+		<li ng-repeat="movie in movies">
+			<a ng-href="{{'/#/movies/' + movie.imdbID}}">{{movie.Title}}</a>
+		</li>
+	</ul>
+</div>
