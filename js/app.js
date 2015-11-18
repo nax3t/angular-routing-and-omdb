@@ -1,6 +1,6 @@
 var app = angular.module('routeApp', ['ngRoute']);
 
-app.config(function($routeProvider){
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 	$routeProvider
 		.when('/', {
 			templateUrl: 'partials/home.html',
@@ -26,5 +26,5 @@ app.config(function($routeProvider){
     	redirectTo: '/'
     })
 
-  // $locationProvider.html5Mode(true);
-})
+  $locationProvider.html5Mode(true);
+}]);
